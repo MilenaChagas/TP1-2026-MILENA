@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+    <title>Adicionar Elemento ao DOM</title>
+</head>
+<body>
+
+    <h2>Lista de Itens</h2>
+
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <button onclick="adicionarElemento()">Adicionar Item</button>
+
+    <script>
+        let contador = 3;
+
+        function adicionarElemento() {
+            const lista = document.getElementById("lista");
+            const novoItem = document.createElement("li");
+            novoItem.textContent = "Item " + contador;
+            lista.appendChild(novoItem);
+            contador++;
+        }
+    </script>
+
+</body>
+</html>
